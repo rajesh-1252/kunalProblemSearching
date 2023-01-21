@@ -17,8 +17,7 @@ const shipWithinDays = (weights, days) => {
     let sum = 0;
     // this sum is the item that we are shiping in a day
     let pieces = 1;
-    // this pieces there for making count and making sure that we shouldn't exceed or bellow the days
-
+    // this pieces is there for making count and making sure that we shouldn't exceed or bellow the days
     for (let key of weights) {
       // we are looping through each item in the array and adding it to the sum and the condition is if the sum exceeds the mid ? then don't add any futher to the same sum create a new sum and add to it so (sum = key) and increase the pieces by 1 since the maximum weight per day exceeds so we need to send the remaining goods on the next day so increase the pieces (here pieces is day)
       if (sum + key > mid) {
@@ -39,5 +38,7 @@ const shipWithinDays = (weights, days) => {
   }
   return s;
 };
-console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
-console.log(shipWithinDays([5, 5, 5, 5, 5], 5));
+// console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
+// console.log(shipWithinDays([5, 5, 5, 5, 5], 5));
+
+console.log(shipWithinDays([3, 6, 7, 11], 8));
