@@ -28,7 +28,6 @@ const minEatingSpeed = (piles, h) => {
     // mid is k here banana per hour
     mid = Math.floor(s + (e - s) / 2);
     let count = 0;
-    let totalHrs = 0;
     for (let i = 0; i < piles.length; i++) {
       if (piles[i] > mid) {
         count += Math.ceil(piles[i] / mid);
@@ -44,6 +43,7 @@ const minEatingSpeed = (piles, h) => {
       e = mid - 1;
     }
   }
+  // why i returned s ?
   return s;
 };
 console.log(minEatingSpeed([3, 6, 7, 11], 8));

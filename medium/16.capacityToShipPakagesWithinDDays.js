@@ -41,4 +41,4 @@ const shipWithinDays = (weights, days) => {
 // console.log(shipWithinDays([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 5));
 // console.log(shipWithinDays([5, 5, 5, 5, 5], 5));
 
-console.log(shipWithinDays([3, 6, 7, 11], 8));
+console.log(shipWithinDays([12, 34, 67, 90], 2));
